@@ -6,9 +6,15 @@ We will share with each other how machine learning is implemented by various gro
 
 Anybody who is interested in using machine learning for medical image computing is welcome.
 
+## Meeting minutes
+
+Meeting minutes are available [here](https://docs.google.com/document/d/1LeSxafO3YzgRHRDnjyA-aQSkcKlbk__QLiJLNQi615o/edit).
+
 ## Agenda
 
 Lookup day and time on the [calendar](../README.md#program-calendar).
+
+Hangout link is [https://meet.google.com/xkf-ymeb-rqs](https://meet.google.com/xkf-ymeb-rqs)
 
 * Presenting current approaches for
   * training data generation
@@ -18,17 +24,15 @@ Lookup day and time on the [calendar](../README.md#program-calendar).
 ## Participants
 - Andras Lasso (PerkLab, Queen's University) - with presentation
 - Steve Pieper (Isomics) - with presentation?
-- Marco Nolden (DKFZ) - with presentation?
+- Marco Nolden (DKFZ), Jonas Scherer (DKFZ) - with presentation
 - Deepak Roy Chittajallu (Kitware) - with presentation
-- Bence Horvath (Unirversity of Szeged) - with presentation?
+- Jean-Christophe Fillion-Robin (Kitware)
 
 Please add your name above if you plan to attend.
 
 Those who already have machine learning projects are encouraged to prepare with a short presentation (maximum 5 minutes; slides are optional) about how they do it now. Please add "with presentation" next to your name.
 
-## Meeting minutes
-
-Meeting minutes will be added here.
+![](./MachineLearning_BreakoutSession.jpg)
 
 ## Background and References
 
@@ -36,6 +40,11 @@ Machine learning solutions used in Slicer:
 - [DeepInfer](http://www.deepinfer.org/): store models on cloud and run locally in docker container
 - [TOMAAT](https://github.com/faustomilletari/TOMAAT-Slicer): store and run models on cloud
 - [SlicerIGT](https://github.com/SlicerIGT/UsAnnotationExport): real-time segmentation of 2D ultrasound image streams, train and run models locally
+  - Classify images and seperate into training, validation and testing datasets using Jupyter Notebook
+  - First approach saved images local machine. Image was detected and the prediction was written to a file to be read by Slicer.
+  - Second approach streams data to Keras using OpenIGTLink and return classification along the same connection
+  
+
 - [Chest imaging platform](https://na-mic.github.io/ProjectWeek/PW27_2018_Boston/Projects/CIPDeepLearningLungSegmentation/): work in progress? does not seem to be integrated in the public repository yet
 
 Related efforts:
@@ -51,7 +60,7 @@ Related efforts:
 - [Girder](http://girder.readthedocs.io/)
   * Girder is both a standalone application and a platform for building new web services and could be leveraged to support sharing of both data and deployed models.
   * For questions, michael.grauer@kitware.com, jcfr@kitware.com
-- Platform for Annotating Activities and Objects in Video
+- [DIVA Platform](https://github.com/Kitware/DIVA) for Annotating Activities and Objects in Video
   * For questions, michael.grauer@kitware.com, jcfr@kitware.com
   * Poster available [here](https://data.kitware.com/api/v1/file/5c4ef2628d777f072b1a5324/download).
   * This is along the lines of annotation creation, display, inter annotator agreement, spatiotemporal clustering, audits, workflows, crowdsourcing, cloud hosting with scalability and availability.

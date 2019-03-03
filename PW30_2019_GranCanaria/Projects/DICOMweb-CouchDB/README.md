@@ -42,8 +42,32 @@ This project aims to work on a prototype lightweight DICOM server that will supp
 <!-- Update this section as you make progress, describing of what you have ACTUALLY DONE. If there are specific steps that you could not complete then you can describe them here, too. -->
 
 1. SlicerChronicle stores DICOM object instances as documents in CouchDB
-2. ...
-3. ...
+1. Repository created in https://github.com/emelalkim/dicomweb-server-js using fastify node.js framework
+1. DICOMweb queries and CouchDB views created for:
+    1. QIDO
+        1. {s}/studies endpoint: Query for studies
+        1. {s}/studies/{study}/series endpoint: Query for series
+        1. {s}/studies/{study}/series/{series}/instances endpoint: Query for instances
+    1. WADO
+        1. {s}/studies/{study}/series/{series}/instances/{instance} endpoint : WADO-URI Retrieve Instance 
+        1. {s}/studies/{study}/metadata endpoint: Retrieve study metadata
+ 
+1. JSON schemas defined for QIDO query responses for studies, series and instances level
+1. Implemented STOW using some parts from Dicomweb-client (https://github.com/dcmjs-org/dicomweb-client) and dcmjs (https://github.com/dcmjs-org/dcmjs)
+
+
+1. Improve code base with documentation, organization and testing
+1. Handling different tag values throughout study
+    1. If there are different values for different series: We are thinking of showing an interface to fix
+    1. If same uid is used with different values: We will show user notification. Optinons are overwriting or letting the user fix. We will start with overwriting
+
+1. Handling multiframes and frames endpoints
+1. Handing compression
+1. Integrate Dicomzero code to dcmjs utils
+1. Message.js should be exported from dcmjs to be used in this project
+
+*Side project C++* : this made some progress in parsing the JSON query results in C++, next steps will be to refactor some methods inside CTK to use JSON objects instead of relying on DcmDataset for internal storage and passing around of DICOM meta information. [experiment code](https://github.com/nolden/CTK/tree/wip-dicomweb)
+
 
 # Illustrations
 
@@ -52,6 +76,8 @@ This project aims to work on a prototype lightweight DICOM server that will supp
 ![Some more images](Example2.jpg)
 -->
 ![Example sequence diagrams](DICOMweb%2BChronicle.png)
+![STOW and WADO-URI example](dicomweb_stow_wadouri_v.png)
+![WADO metadata example](dicomweb_metadata.png)
 
 # Background and References
 

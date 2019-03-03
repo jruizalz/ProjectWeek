@@ -6,7 +6,9 @@ Back to [Projects List](../../README.md#ProjectsList)
 
 - [Attila Nagy](http://www2.szote.u-szeged.hu/dmi/eng/index.php/the-department/staff) (SZTE Medical School, Hungary)
 - [Csaba Pinter](http://perk.cs.queensu.ca/users/pinter) (Queen's University, Canada)
-- [Steve Pieper](http://isomics.com) (Isomics Inc.)
+- [András Lassó](http://perk.cs.queensu.ca/users/lasso) (Queen's University, Canada)
+- [Steve Pieper](http://isomics.com) (Isomics Inc., Cambridge, MA, USA)
+- [Jean-Christophe Fillion-Robin](https://www.kitware.com/jean-christophe-fillion-robin/) (KitWare Inc., Chapel Hill, North Carolina, USA)
 - whoever wants to join/has ideas/has some time... :)
 
 # Project Description
@@ -23,15 +25,26 @@ Sometimes unknown file formats are encountered that contain images. There are fr
 1. Add some more functionality.
 2. Add ideas so they can be implemented later.
 
-## Progress and Next Steps
+## Progress 
 
 <!--Describe progress and next steps in a few bullet points as you are making progress.-->
+All basic image parameters can be set:
+- header to skip
+- endianness
+- X, Y and Z dimensions
+- image bit depth/pixel type
+
+## Next Steps:
+- set automaic thresholding
+- automatically update the image in the viewer
+- display it in the 3D viewer
+- calculate cross-correlation between lines of image to make the guessing easier
 
 # Illustrations
 
 <!--Add pictures and links to videos that demonstrate what has been accomplished.-->
-
-![The GUI looks currently like this](https://raw.githubusercontent.com/NA-MIC/ProjectWeek/master/PW28_2018_GranCanaria/Projects/RawImageGuess/2018-06-29.png)
+This is how the moddule looks as of 2019. 02. 01.
+[![This is how the moddule looks as of 2019. 02. 01.](rawimageguess.v0.1.jpg)](https://youtu.be/IoBsmtqtmqo "Raw Image Guess tool for 3D Slicer")
 
 <!--![Description of picture](Example2.jpg)-->
 

@@ -7,10 +7,21 @@ Back to [Projects List](../../README.md#ProjectsList)
 - Andrey Fedorov (BWH)
 - Hans Meine (Fraunhofer MEVIS)
 - Markus Herrmann (BWH/MGH CCDS)
+- Jean-Christophe Fillion-Robin (Kitware)
 - Steve Pieper (Isomics)
-- James A. Petts
+- James A. Petts (Institute of Cancer Research UK)
 - Jasmin Metzger (DKFZ)
 - Marco Nolden (DKFZ)
+- Tobias Stein (DKFZ)
+- Srikrishna Prasad (Siemens)
+- Peter Oppermann (Fraunhofer MEVIS)
+- Jonas Scherer (DKFZ)
+- Emel Alkim (Stanford)
+- Mete Akdogan (Stanford)
+- Andras Lasso (Queen's)
+- Erik Ziegler (Radical Imaging)
+- David Clunie (Pixelmed Publishing)
+- Ron Kikinis (BWH)
 
 # Project Description
 
@@ -41,9 +52,52 @@ implementation in various tools being developed at the Project week.
 
 <!-- Update this section as you make progress, describing of what you have ACTUALLY DONE. If there are specific steps that you could not complete then you can describe them here, too. -->
 
-1. Describe specific steps you **have actually done**.
-1. ...
-1. ...
+
+### DICOM Breakout
+Several relevant projects were presented during the DICOM breakout session on Wednesday:
+* Andrey: Imaging Data Standardization for AI and Big Data applications [slides](http://bit.ly/2Wt9AxX)
+* Steve: Demonstrations of OHIF DICOM interoperability
+* Srikrishna Prasad: Use of DICOM in Siemens Teamplay
+* Marco Nolden, Tobias Stein: Use of DICOM in the *DKTK Joint Imaging Platform* and the [Segmentation Review System](https://drive.google.com/file/d/1NXiu18mCFXrIaEgQ1WdzBbmq9igIyZNN/view?usp=sharing) 
+* Markus Herrmann: DICOM for Digital Pathology
+* Peter Oppermann and Hans Meine: DICOM on FIHR [notes](https://docs.google.com/document/d/1INqLOu4xOQN59_ifdMc7P8qhqb08SiY5LRs59kgCCRw), see [this project page](https://na-mic.github.io/ProjectWeek/PW30_2019_GranCanaria/Projects/DICOMSRTID1500-FHIR/) for more info
+Both Markus and "DICOM on FIHR" use the [DICOM4QI](https://dicom4qi.readthedocs.io) datasets as reference for development.
+
+Resources:
+* RSNA demonstration/connectathon materials (with sample datasets): [https://dicom4qi.readthedocs.io](https://dicom4qi.readthedocs.io)
+* Relevant open source tools list [here](https://dicom4qi.readthedocs.io/en/latest/resources/software/)
+* Public datasets list [here](https://dicom4qi.readthedocs.io/en/latest/resources/datasets/)
+* LIDC dataset [https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI)
+* LIDC annotations in DICOM [on TCIA here](https://wiki.cancerimagingarchive.net/display/DOI/Standardized+representation+of+the+TCIA+LIDC-IDRI+annotations+using+DICOM)
+* Conversion library (C++) we use in Slicer and MITK: [https://github.com/qiicr/dcmqi](https://github.com/qiicr/dcmqi)
+* DICOM tutorial at MICCAI (2017 and 2018, archived): [http://qiicr.org/dicom4miccai/](http://qiicr.org/dicom4miccai)
+
+### DICOM SR TID1500 support in pydicom
+
+Markus has been working on defining/implementing the API, helped by the discussions/pointers from Andrey and Steve
+* This stuff is hard!
+* Located XML template definitions in David Clunie [Pixelmed library](http://www.dclunie.com/pixelmed/software/20181018_current/index.html), see `com/pixelmed/validate/DicomSRDescriptionsSource.xml` (not clear what version of the standard that file corresponds to, i.e., how old it is)
+* Discussed the possibility of wrapping DCMTK in python automatically, or at least a portion of the API. Related efforts mentioned by Jörg Riesmeier on DCMTK wrapping:
+  * [https://pypi.org/project/pypx/](https://pypi.org/project/pypx/) (networking only)
+  * [https://launchpad.net/pydcmtk](https://launchpad.net/pydcmtk) (does not seem to be a maintained project)
+* We ultimately decided to not auto-generate Python code from XML template definitions for now but rather manually implement TID 1500 Measurement Report and other templates that can be included (e.g., TID 300 Measurement). While code auto-generation from template or schema definitions would generally be a good idea, we realized that this task is challenging due to the complexity of SR templates (highly nested document trees, conditionally required content items, etc.). Further, we decided, on the one hand, to not implement all optional content items (some information can be included at multiple locations within an SR document and may thus be duplicated) and, on the other hand, to require some optional content items that we felt are crucial (e.g., Device Observer).
+* Markus has implemented all templates relevant for TID 1500 Measurement Report in *pydicom*. The API is primarily intended for construction of DICOM Comprehensive SR documents and provides high-level abstractions and sanity checks to facilitate the generation of document content. Markus is adding tests and will create a pull request to public *pydicom* (https://github.com/pydicom) repository once all tests pass.
+
+
+### Infrastructure improvements
+1. Until recently, MITK was using a patched version of dcmqi for DICOM SEG/SR1500 support due to the issues in dcmqi superbuild that prevented its use without SlicerExecutionModel. This was resolved (jsoncpp updated to a version more suitable for C++11) with the joint efforts of JC, Andrey and Marco, and now we can expect MITK to use the main dcmqi repository.
+1. JC fixed packaging of dcmqi on Linux, and improved the CI script for CircleCI. Thanks for the magic, JC!
+
+### New tools supporting DICOM for derived data
+1. Srikrishna is working to use DICOM SEG for communicating analysis results within the Siemens Teamplay project. Functional demo is available. Sample dataset to be shared to DICOM4QI.
+1. James has a functional implementation of DICOM SEG read/write in XNAT, scheduled to become available in the next release in April 2019.
+
+### Other DICOM related topics discussed
+1. **Converting non-DICOM images into DICOM** Raised by Tobias Stein and Maro: In imaging research groups, there is frequently an abundance of the images in non-DICOM format. There is a practical question of how to harmonize those with the DICOM data, and maintain them in the same database. It would be helpful to be able to convert those representations into some DICOM format. Slicer has a [CreateDICOMSeries](https://github.com/Slicer/Slicer/tree/master/Modules/CLI/CreateDICOMSeries) module, but it can only create a non-enhanced CT series, and has limitations. It will also be, in the general case, impossible to meaningfully populate modality-specific attributes, if a modality-specific object is created. Discussed possible suitable containers for such representation:
+   * [Raw Data IOD](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_A.37.html) - does not have `PixelData`, may be "too raw"?
+   * Various types of [Secondary Capture IODs](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_A.8.html)
+   * Does it make sense to suggest a new IOD to cover an image of a known modality, but where acquisition details are not known?
+1. **Harmonization of DICOM infrastructure between Slicer and MITK** (or rather, lack of such!). Both MITK and Slicer (need to) implement various strategies for parsing DICOM data into volumetric reconstructions. Both do this independently, as many other tools and converters do. It might be interesting to investigate how those developments could be coordinated. Andras, Marco and Andrey discussed this and are planning to follow up with a further discussion to go over details. Will also invite Ralf Floca from the MITK team.
 
 # Illustrations
 

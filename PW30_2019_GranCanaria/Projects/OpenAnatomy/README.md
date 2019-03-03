@@ -29,20 +29,12 @@ Improve 3D Slicer’s existing features to support glTF file format export/impor
 ## Progress and Next Steps
 
 1. Evaluated multiple gltf toolkits. Found that tinygltf library seems to be small but capable enough to fulfill our needs.
+1. Converted [Voxel-man](https://www.voxel-man.com/) models to Slicer segmentation object
 
-## Illustrations
-
-Male pelvis segmentation made in 3D Slicer
-
-<img src="../../../PW28_2018_GranCanaria/Projects/AtlasDevelopmentForEducation/PELVIS.png" width="80%">
-
-Anatomical Atlas - Open Anatomy Browser.
-
-<img src="../../../PW28_2018_GranCanaria/Projects/AtlasDevelopmentForEducation/oabrowser.jpg" width="80%">
-
-Web tool for assembling Anatomical Atlas
-
-<img src="../../../PW28_2018_GranCanaria/Projects/AtlasDevelopmentForEducation/tool.jpg" width="80%">
+Segmentation developments needed to better support atlases (with hundreds of segments):
+- Reduce memory need of saving (we cannot save segmentations with many labels)
+- Many operations are very slow
+- Segment search/filter option needed
 
 ## Background and References
 

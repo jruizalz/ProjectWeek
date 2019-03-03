@@ -4,7 +4,18 @@
 
 <table>
 <tr>
-    <td> <img src="PW30-500px.png"> </td>
+    <td> <img src="NA-MIC3.jpg" width="450" height="300"> </td>
+    <td> <img src="NA-MIC4.jpg" width="450" height="300"> </td>
+</tr>    
+<tr>
+    <td> <img src="NA-MIC1.jpg" width="450" height="225"> </td>
+    <td> <img src="NA-MIC2.jpg" width="450" height="225"> </td>
+</tr>
+</table>
+
+<table>
+<tr>
+    <td> <img src="PW30-500px.png"></td>
   <td> <b>Local Organizing Committee Host:</b> <ul><li>Juan Ruiz-Alzola, PhD, Professor of Imaging Technologies, director of the Grupo de Tecnología Médica y Audiovisual (GTMA), <a href="http://www.iuibs.ulpgc.es/">Instituto Universitario de Investigaciones Biomédicas y Sanitarias</a> (IUIBS), <a href="http://www.ulpgc.es">Universidad de Las Palmas de Gran Canaria</a> (ULPGC) </li> <li> Email Local Organizing Committee: <a href="mailto:marilola.afonso@ulpgc.es?cc=juan.ruiz@ulpgc.es&subject=ProjectWeek30">Technical Topics: Maria Dolores Afonso Suarez</a> <a href="mailto:asmaa.skareb@ulpgc.es?cc=juan.ruiz@ulpgc.es&subject=ProjectWeek30">Administrative Topics: Asmaa Skareb</a> </li></ul></td>
 </tr>
 </table>
@@ -14,7 +25,15 @@ The 30th NA-MIC Project Week will be held during the week of January 28 - Februa
 Please read about our experience in running these events since 2005: [Increasing the Impact of Medical Image Computing Using
 Community-Based Open-Access Hackathons: the NA-MIC and 3D Slicer Experience](http://www.spl.harvard.edu/publications/item/view/3004).
 
-This is our second Project Week in Las Palmas.   [Project Week 28](https://na-mic.github.io/ProjectWeek/PW28_2018_GranCanaria/) was held in this location as well, and captured in [photos](https://drive.google.com/drive/folders/1Gh2L26K96d3jzpT7LReaPWAbc1Ao815p?usp=sharing), and [coverage by the local media](../PW28_2018_GranCanaria/PW28InTheMedia.md).
+## Photo Album
+
+This is our second Project Week in Las Palmas. [Photos Project Week 30 in a Google Drive folder](https://drive.google.com/drive/folders/19nuPjpcHGNKOfJZozDwPeHQaYxmU3Mjq?usp=sharing) 
+
+[Google Photos album](https://photos.app.goo.gl/qv1mgzwbugnhf1iw8)
+
+30 PW NA-MIC in [the media](PW30InTheMedia.md) 
+
+First project wek in Las Palmas. [Project Week 28](https://na-mic.github.io/ProjectWeek/PW28_2018_GranCanaria/) was held in this location as well, and captured in [Photos Project Week 28](https://drive.google.com/drive/folders/1Gh2L26K96d3jzpT7LReaPWAbc1Ao815p?usp=sharing), and [coverage by the local media](../PW28_2018_GranCanaria/PW28InTheMedia.md).
 
 ## Logistics
 - **Dates:** January 28 - February 1, 2019.
@@ -58,7 +77,7 @@ This is our second Project Week in Las Palmas.   [Project Week 28](https://na-mi
 1. [Markups redesign and new markups for curve, line, and angle measurement](Projects/MarkupsRedesign/README.md) (Davide Punzo, Andras Lasso, Sara Rolfe, Kyle Sunderland, Steve Pieper, Jean-Christophe Fillion-Robin)
 1. [GLSL shaders for custom volume rendering and image processing](Projects/GLSLShaders/README.md) (Kyle Sunderland, Steve Pieper, Andras Lasso, Jean-Christophe Fillion-Robin)
 1. [MorphoSource and Data Retrieval](Projects/MorphoSourceDataRetrieval/README.md) (Sara Rolfe, Steve Pieper, Murat Maga (remote), Doug Boyer (remote), Julie Winchester (remote))
-1. [Raw Image Read and Display](Projects/RawImageGuess/README.md) (Attila Nagy, Csaba Pintér (remote), Steve Pieper)
+1. [Raw Image Read and Display](Projects/RawImageGuess/README.md) (Attila Nagy, Csaba Pintér (remote), Steve Pieper, András Lassó, Jean-Christophe Fillion-Robin)
 1. [OHIF and DCM4CHEe within Kubernetes](Projects/ohif_dcm4chee_kubernetes/README.md) (Jonas Scherer, Andrey Fedorov, Erik Ziegler)
 1. [OHIF Web Components](Projects/ohif_web_components/README.md) (Erik Ziegler, Steve Pieper, Sandra Siegel, Forrest Li, James Petts,Peter Oppermann, Hans Meine, Markus Herrmann)
 
@@ -68,12 +87,12 @@ This is our second Project Week in Las Palmas.   [Project Week 28](https://na-mi
 1. [MR Needle Guidance Software](Projects/MRINeedleGuidance/README.md) (Eleni Siampli, Steve Pieper, Kevin Cleary, Andras Lasso, Andrey Fedorov)
 1. [Upper airway segmentation and airflow simulation](Projects/UpperAirwayAirflowSimulation/README.md) (Kitti Farkas, Attila Nagy, Bence Horváth, Endre Vecsernyés, Andras Lasso, Jean-Christophe Fillion-Robin)
 1. [Automatic Segmentation Using Neural Networks](Projects/NeuroNetworkSegmentationofNeck/README.md) (Bence Horvath, Attila Nagy, Kitti Farkas, Endre Vecsernyés, András Lasso, Tina Kapur (remote), Paolo Zaffino (remote), Deepak Chittajallu)
-1. [Data-glove for virtual operations](Projects/Data-glove_for_virtual_operations/README.md) (Endre Vecsernyés, Attila Nagy, Kitti Farkas, Bence Horvath, András Lasso)
+1. [Data-glove for virtual operations](Projects/Data-glove_for_virtual_operations/README.md) (Endre Vecsernyés, Attila Nagy, Kitti Farkas, Bence Horvath, Kyle Sunderland, Eleni Siampli, András Lasso)
 
 ### Segmentation and Quantification
 
 1. [Segment Editor use cases](Projects/SegmentEditor/README.md) (Andras Lasso, Scheherazade Krass)
-1. [Refining automatic segmentations from FreeSurfer in 3D Slicer](Projects/AutomSegmentFreeSurfer/README.md) (Nikos Makris, Juan-Andrés Ramírez-González, Yogesh Rathi, Nayra Pumar Carreras, Juan Ruiz Alzola)
+1. [Refining automatic segmentations from FreeSurfer in 3D Slicer](Projects/AutomSegmentFreeSurfer/README.md) (Nikos Makris, Juan-Andrés Ramírez-González, Yogesh Rathi, Nayra Pumar Carreras, Zora Kikinis, Juan Ruiz Alzola)
 1. [SlicerMorph](Projects/SlicerMorphGeometricMorphometricToolset) (Sara Rolfe, Murat Maga (remote), Steve Pieper)
 1. [Microscopy Module for 3D Slicer](Projects/Microscopy/README.md) (Aziza Elmahjoub, Abián Hernández-Guedes, María Dolores Afonso-Suárez, Juan Ruiz-Alzola)
 1. [OHIF.AI](Projects/OHIF.AI/README.md) (Srikrishna Prasad, Steve Pieper, Erik Ziegler)
@@ -86,7 +105,7 @@ This is our second Project Week in Las Palmas.   [Project Week 28](https://na-mi
 1. [New features for an ultrasound training system](Projects/UltrasoundSimulatorTraining/README.md) (José-Carlos Ruiz-Luque,  Guillermo Valentín Socorro-Marrero, Csaba Pinter, Samba Diaw, Oumar Kane, Joseane Ferreira, Juan Ruiz-Alzola)
 1. [3DSlicer Training Programs](Projects/TrainingPrograms/README.md) (GTMA group, Alexandra Fernandes Rodrigues, Ahmedou Moulaye Idriss, Yahya Tfeil, Mohamed Septy, Joseanne Alexandra Da Rosa De Pina Ferreira, Sonia Pujol)
 1. [3DSlicer Models for Brain Quiz](Projects/3DSlicerModelsforBrainQuiz/README.md) (Sergi Bermudez i Badia, Yuri Almeida, Abián Hernández-Guedes, Artemisa Moreno, María Dolores Afonso-Suárez, Juan Ruiz-Alzola)
-1. [Use of 3D Slicer in training programs](Projects/Useof3DSlicerinTrainig/README.md) (Ron Kikinis, Gabor Fichtinger, Andras Lasso, Kevin Cleary, Attila Nagy, Juan Ruiz-Alzola)
+1. [Using 3D Slicer in University Biomedical Engineering Degrees](Projects/Useof3DSlicerinTrainig/README.md) (Ron Kikinis, Gabor Fichtinger, Andras Lasso, Kevin Cleary, Attila Nagy, Sonia Pujol, Juan Ruiz-Alzola)
 1. [Looking Glass 3D Display](Projects/LookingGlass/README.md) (Mike Halle, Andras Lasso)
 
 ### Open Anatomy
@@ -103,9 +122,10 @@ This is our second Project Week in Las Palmas.   [Project Week 28](https://na-mi
 - Anatomy segmentation
 - Use of 3D Slicer in educational programs
 - [Slicer core update and plans](BreakoutSessions/SlicerCoreUpdateAndPlans.md)
-- OHIF, vtkjs, and related web technologies
+- [OHIF, vtkjs, and related web technologies](https://docs.google.com/document/d/1ednZqbJEoe-Vg_y2FwK20F1-78SeRMDUDVoplCp3fW4/edit?usp=sharing)
 - Neuroanatomy
 - [Machine learning](BreakoutSessions/MachineLearning.md)
+- [Training of Specialists in Mozambique](BreakoutSessions/CatedraEdMed.pdf)
 
 ## Registrants
 
@@ -127,7 +147,7 @@ List of registered participants so far (names will be added here after processin
 1. Jean-Christophe Fillion-Robin (@jcfr)(jchris.fillionr@kitware.com) - Kitware Inc. - USA
 1. Mohamed El Moctar Septy (@msepty)(moksepty@yahoo.fr) - Faculté de Médecine, Université de Nouakchott Al Aasriya - Mauritania
 1. Ahmedou Moulaye Idriss (amdriss6@gmail.com) - Centre Hospitalier National Nouackchott - Mauritania
-1. Yayha Ould Tfeil (tefeil2000@gmail.com) - Centre Hospitalier National Nouackchott - Mauritania
+1. Yahya Ould Tfeil (tefeil2000@gmail.com) - Centre Hospitalier National Nouackchott - Mauritania
 1. M Alexandra Fernandes Rodrigues (malexa.rodrigues@gmail.com) - Faculdade de Medicina da Universidade Eduardo Mondlane - Mozambique
 1. Joseane Alexandre Da Rosa de Pina Ferreira (joseane.ferreira@han.gov.cv) - Hospital Agostinho Neto de Praia - Cabo Verde
 1. Artemisa Mendes Moreno (artemisa.moreno@docente.unicv.edu.cv) - Faculdade de Ciências e Tecnologia, Universidade de Cabo Verde - Cabo Verde
@@ -173,15 +193,18 @@ List of registered participants so far (names will be added here after processin
 1. Andras Lasso (@lassoan)(lasso@queensu.ca) - Queen’s University - Canada
 1. Kyle Sunderland (1krs1@queensu.ca) - Queen’s University - Canada
 1. Srikrishna Prasad (srikrishna.prasad@siemens-healthineers.com) - Siemens Healthineers GmBH - Germany
+1. Forrest Li (forrest.li@kitware.com) -  Kitware Inc. - USA
 
-
-
-<!--
 
 ## Statistics
 
-(To be added during/after the event)
--->
+1. 7 Topics
+1. 33 projects
+1. 60 registrants
+1. 28 institutions
+1. 13 countries
+1. 3 continents
+
 
 ## Parallel Event - Casa Africa
 

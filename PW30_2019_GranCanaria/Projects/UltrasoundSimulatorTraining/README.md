@@ -33,8 +33,23 @@ This project is a next step in the one presented during 28th PW NA-MIC and it ai
 4. Studying the MicrUs SDK to visualize the image orientation marker symbol and it will be implemented in the Plus Toolkit or 3D Slicer. 
 
 ## Progress and Next Steps
-
-
+1. The image orientation marker symbol
+     - We discussed the image orientation marker symbol with PerkLab team 
+     - We developed a prototype (see [Figure 6](ImageOrientationMarkerSymbol_Result.png))
+           - The symbol is a new actor in a viewport (2D scene)
+           - We´ll integrate a stable version in our system
+1. MultiLangauge
+     - We worked with Jean-Christophe Fillion-Robin (@jcfr) to improve the current implementation in 3D Slicer
+           - We fixed a bug in CMake file
+           - Creating a Spanish version in a part of the 3D Slicer GUI (see [Figure 7](SpanishVersion3DSlicerGUI.png) )
+     - We are working the multilanguage in the python support 
+1. Angle
+     - We evaluated several strategies:
+           - Module: angle measurement by Andras Lasso
+           - Defining various vectors of the needle and image axes from the MRML
+     - A selected proposal will be developed in outgoing
+     
+     
 # Illustrations
 
 Guidelet muli-language interface:
@@ -60,6 +75,16 @@ Figure 4.  An angle between a plane of the US image and a needle or a needle mod
 <img src="ImageOrientationMarkerSymbol.png" width="430" height="422" >
 
 Figure 5. An image orientation marker symbol (in blue color)
+
+**Outcome:**
+
+<img src="ImageOrientationMarkerSymbol_Result.png" > 
+
+Figure 6. A prototype for the image orientation marker symbol (M) and the depth (green rectangles)
+
+ <img src="SpanishVersion3DSlicerGUI.png" >
+
+Figure 7. A Spanish version of 3D Slicer GUI
 
 
 # Background and References
